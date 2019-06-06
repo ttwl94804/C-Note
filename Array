@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,,] cell = { { { 1, 2, 3, 4 }, { 4, 5, 6, 4 }, { 7, 8, 9, 4 } }, { { 9, 8, 7, 4 }, { 6, 5, 4, 4 }, { 3, 2, 1, 4 } } };
+            Console.WriteLine(cell[0, 0, 0]);//第一列第一行第一个，1
+            Console.WriteLine(cell.Length);//24
+
+            // ************************************
+            int[][] a = { new int[] { 1 }, new int[] { 2, 3 }, new int[] { 4, 5, 6 } };
+            Console.WriteLine(a[1][0]);//第1个数组的第0个数
+            Console.WriteLine(a.Length);//3
+
+            //***************************
+            string[] b = { "auck", "bou", "cother"  };
+            System.Array.Sort(b);//对数组进行排序,a-z,0-9
+            string c = "bou";
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i]+"\t");
+
+            }
+            int int1 = System.Array.BinarySearch(b, c);//从数组中查找指定的数，并输出序号
+            Console.Write("\n"+int1+"\n");
+            Console.WriteLine($"{"First Element",-20}{"Last Element"}");
+
+            //*****************************
+            
+            Console.WriteLine(cell.GetLength(0));//0表示返回数组有多少维，1表示返回数组维里面的元个数
+
+            Console.Read();
+
+            //string[] str;
+            //Console.Write("How many items on the list?");
+            //int size = int.Parse(Console.ReadLine());
+            //str = new string[size];
+        }
+    }
+}
