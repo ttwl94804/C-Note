@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 数据类型_Parse__
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "1246";
+            string srt1 = "123456.1234565";
+            bool bo=false;
+            Console.WriteLine(int.Parse(str) +"+"+ double.Parse(srt1) +"+"+ bo.ToString());
+            int a;
+            if(int.TryParse(str,out a))  //return false or ture
+            {
+                Console.WriteLine("aaaaa");
+            }
+            else
+            {
+                Console.WriteLine("bbbbb");
+            }
+            Console.Read();
+        }
+    }
+}
