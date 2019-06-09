@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 控制流语句
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int x = 0,y=5; ((x<=5)&&(y>=0)) ;  x++,y--)
+            {
+                System.Console.Write($"{x}{((x>y)?'>':'<')}{y}\t");
+                
+            }
+
+            //*****************************
+            int input = Console.Read();
+            switch(input)
+            {
+                case 1:
+                    Console.WriteLine(input);
+                    break;
+                case 2:
+                    Console.WriteLine(input);
+                    goto default;
+                    
+                default:
+                    Console.WriteLine("you win");
+                    break;
+                        
+            }
+            Console.Read();
+        }
+    }
+}
