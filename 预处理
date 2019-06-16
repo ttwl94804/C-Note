@@ -1,0 +1,49 @@
+//#define DEBUG    //定义一个DEBUG
+#undef DEBUG        //取消定义
+//#define TRACE
+#undef TRACE
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 预处理
+{
+
+    //    class Program
+    //    {
+    //        static void Main(string[] args)
+    //        {
+    //#if DEBUG
+    //            Console.Write("aaaaaaa");
+    //#endif
+    //            Console.Read();
+
+    //        }
+    //    }
+
+    class Define//第一行代码有3个预处理，#define和#undef分别自定义一个变量和取消定义一个变量
+    {
+        static void Main(string[] args)
+        {
+
+#if (DEBUG)
+            Console.WriteLine("Debugging is enabled.");
+#endif
+
+#if (TRACE)
+     Console.WriteLine("Tracing is enabled.");  
+#endif
+            Console.Read();
+        }
+    }
+
+    class Warning
+    {
+
+#warning test
+#warning 你将会看到一个“报警”
+#pragma warning disable 1030
+    }
+}
