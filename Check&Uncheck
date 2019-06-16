@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 数据类型_checked_unchecked
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            checked//会检查，如果大数据类型转换为小数据类型，会报错
+            {
+                int n = int.MaxValue;
+                n += 1;
+                Console.WriteLine(n);
+                Console.Read();
+
+            }
+            unchecked//不会检查,输出负数
+            {
+                int n = int.MaxValue;
+                n += 1;
+                Console.WriteLine(n);
+                Console.Read();
+
+
+            }
+        }
+    }
+}
