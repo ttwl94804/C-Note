@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 条件操作符
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1 = null; ;       
+            string str2="123";
+            bool bool1 = true;
+            string str = str1 ?? str2;//空接合操作符//如果str为空，则将"cao"赋值给str1;
+
+            Console.WriteLine(str);
+
+            //*************************************
+            string str3="Hello World" ;
+            if (str2?.Length!=0)//等价于if(str2!=null)
+            {
+                Console.WriteLine(str2?.Length);
+            }
+
+            //***************************
+            int int1=1, int2=2, int3=3;
+            if(int1>int2^int3>int2)//^异或运算符，当两者只有一个为真时才成立
+            {
+                Console.WriteLine(String.Format("{0}>{1}^{2}>{1}", int1, int2, int3));
+            }
+            Console.Read();
+        }
+    }
+}
